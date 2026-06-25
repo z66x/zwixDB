@@ -9,6 +9,7 @@ from core.hnsw import ZwixHNSW
 from core.brute_force import BruteForceEngine
 from core.embedder import TextEmbedder
 from api.models import QueryRequest, SearchResponse, SearchResult
+from fastapi.responses import FileResponse
 
 # Global state pointers
 embedder = None
@@ -45,7 +46,7 @@ async def lifespan(app: FastAPI):
     yield
     print("\n[SHUTDOWN] Purging memory buffers...")
 
-app = FastAPI(title="Semantic Cinema API", lifespan=lifespan)
+app = FastAPI(title="Vibe Search API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -54,6 +55,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def serve_ui():
+    """Serves the frontend dashboard directly from the API."""
+    return FileResponse("frontend/index.html")
 
 @app.get("/health")
 async def health():

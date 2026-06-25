@@ -1,4 +1,4 @@
-# Semantic Cinema | Custom HNSW Vector Search Engine
+# Vibe Search | Custom HNSW Vector Search Engine
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Python](https://img.shields.io/badge/python-3.12+-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-Production-009688) ![NumPy](https://img.shields.io/badge/NumPy-Optimized-013243)
 
@@ -13,7 +13,7 @@
 The client layer features a split-screen dark-mode diagnostic UI. To prove the underlying algorithmic integrity, every user query executes parallel asynchronous calls against both the custom HNSW Graph and an optimized, C-compiled NumPy brute-force linear scan.
 
 <!-- <p align="center">
-  <img src="frontend/assets/demo.gif" width="800" alt="Semantic Cinema Split-Screen Search UI">
+  <img src="frontend/assets/demo.gif" width="800" alt="Vibe Search Split-Screen UI">
 </p> -->
 
 * **Live App Link:** Coming soon!

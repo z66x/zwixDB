@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semantic Cinema | Vector Engine</title>
+    <title>Vibe Search | Vector Engine</title>
     <style>
         /* CSS Variables */
         :root {
@@ -33,14 +33,18 @@
         body::before {
             content: "";
             position: fixed;
-            top: -50%; left: -50%; right: -50%; bottom: -50%;
-            width: 200vw; height: 200vh;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            width: 200vw;
+            height: 200vh;
             background: 
-                radial-gradient(circle at 30% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 75% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 45%),
-                radial-gradient(circle at 15% 65%, rgba(255, 255, 255, 0.05) 0%, transparent 35%),
-                radial-gradient(circle at 60% 85%, rgba(239, 68, 68, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.1) 0%, transparent 30%);
+                radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 75% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 45%),
+                radial-gradient(circle at 15% 65%, rgba(255, 255, 255, 0.1) 0%, transparent 35%),
+                radial-gradient(circle at 60% 85%, rgba(255, 255, 255, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.5) 0%, transparent 30%);
             animation: waveFlow 25s infinite alternate ease-in-out;
             z-index: -1;
             pointer-events: none;
@@ -363,8 +367,8 @@
     <div class="container">
         <header>
             <div class="title-block">
-                <h1>semantic cinema</h1>
-                <div class="subtitle">Multi-Layer Skip Graph vs Linear Scan • Vector Engine</div>
+                <h1>vibe search</h1>
+                <div class="subtitle">Multi-Layer Skip Graph vs Linear Scan</div>
             </div>
             
             <div class="status-pill">
@@ -377,8 +381,8 @@
 
         <main>
             <form id="search-form">
-                <label for="query">Semantic Vibe / Plot Description</label>
-                <textarea id="query" placeholder="Drop a vibe... (e.g. 'A gritty 90s mob movie directed by Scorsese')"></textarea>
+                <label for="query">Vibe / Plot Description</label>
+                <textarea id="query" placeholder="Drop a vibe... (e.g. 'a nerdy teenager gets superpowers and swings through new york')"></textarea>
 
                 <div class="controls-grid">
                     <div class="slider-box">
@@ -417,7 +421,7 @@
     </div>
 
     <script>
-        const API_URL = 'http://127.0.0.1:8000';
+        const API_URL = '';
         
         // DOM Elements
         const elements = {
